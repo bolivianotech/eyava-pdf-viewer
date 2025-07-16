@@ -25,8 +25,9 @@ let pageIsRendering = false;
 let pageNumIsPending = null;
 
 // Use the worker from the same CDN
-pdfjsLib.GlobalWorkerOptions.workerSrc = `https://mozilla.github.io/pdf.js/build/pdf.worker.js`;
-
+//pdfjsLib.GlobalWorkerOptions.workerSrc = `https://mozilla.github.io/pdf.js/build/pdf.worker.js`;
+// Esta es la nueva ruta correcta para el worker
+pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js`;
 // --- FUNCTIONS ---
 
 /**
