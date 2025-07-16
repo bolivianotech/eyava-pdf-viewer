@@ -10,38 +10,38 @@
 <body>
     <div class="container">
         <header>
-            <h1>Online PDF Viewer</h1>
-            <p>Upload and view PDF documents directly in your browser.</p>
+            <h1>Eyava PDF Viewer</h1>
+            <p> Sube y mira tus documentos PDF directamente en tu navegador.</p>
         </header>
 
         <main>
             <div class="upload-section">
-                <h2>Upload a New Document</h2>
+                <h2>Sube un nuevo documento</h2>
                 <form id="upload-form">
-                    <label for="uploader-name">Your Name:</label>
+                    <label for="uploader-name">Ingresa tu nombre completo:</label>
                     <input type="text" id="uploader-name" required>
                     
-                    <label for="pdf-file">Select PDF File:</label>
+                    <label for="pdf-file">Selecciona el archivo PDF:</label>
                     <input type="file" id="pdf-file" accept="application/pdf" required>
                     
-                    <button type="submit" id="upload-button">Upload File</button>
+                    <button type="submit" id="upload-button">Subir el PDF</button>
                     <div id="upload-status"></div>
                 </form>
             </div>
 
             <div class="viewer-section">
                 <div class="file-list-wrapper">
-                    <h2>Available Documents</h2>
+                    <h2>Documentos disponibles</h2>
                     <div id="file-list-container">
-                        <p>Loading documents...</p>
+                        <p>Cargando documentos...</p>
                     </div>
                 </div>
                 <div class="pdf-viewer-wrapper">
-                    <h2 id="pdf-title">Select a document to view</h2>
+                    <h2 id="pdf-title">Selecciona un documento para verlo</h2>
                     <div id="pdf-viewer-controls">
-                        <button id="prev-page">Previous</button>
+                        <button id="prev-page">Anterior</button>
                         <span id="page-num-display"></span>
-                        <button id="next-page">Next</button>
+                        <button id="next-page">Siguiente</button>
                     </div>
                     <div id="pdf-viewer">
                         <canvas id="pdf-canvas"></canvas>
