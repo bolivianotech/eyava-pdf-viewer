@@ -1,7 +1,7 @@
 // --- CONFIGURATION ---
 // PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE
 //const SCRIPT_URL = "https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec";
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzGgb_7cSl5MVxrXWMaFoRpInCS5DnzbtVAi7tMLQ-svB4yni56QfQcZ-hGa7HGxsJID/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzGgb_7cSl5MVxrXWMaFoRpInCS5DnzbtVAi7tMLQ-svB4yni56QfQcZ-hGa7HGxsJI/exec";
 // --- DOM ELEMENTS ---
 const uploadForm = document.getElementById('upload-form');
 const uploaderNameInput = document.getElementById('uploader-name');
