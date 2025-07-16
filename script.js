@@ -88,7 +88,7 @@ const showNextPage = () => {
  * Loads and displays a PDF from a Google Drive file ID.
  * @param {string} fileId The ID of the file in Google Drive.
  * @param {string} fileName The name of the file to display.
- */
+ 
 const viewPdf = (fileId, fileName) => {
     pdfTitle.textContent = 'Loading...';
     // The URL to directly download the file content from Drive
@@ -107,6 +107,43 @@ const viewPdf = (fileId, fileName) => {
         console.error('Error loading PDF:', err);
         pdfTitle.textContent = 'Failed to load PDF.';
     });
+};
+*/
+/**
+ * Fetches PDF data as Base64 from our Google Apps Script and displays it.
+ * @param {string} fileId The ID of the file in Google Drive.
+ * @param {string} fileName The name of the file to display.
+ */
+const viewPdf = (fileId, fileName) => {
+    pdfTitle.textContent = `Loading: ${fileName}...`;
+    
+    // Construct the URL to our own script, passing the fileId as a parameter
+    const fetchUrl = `${SCRIPT_URL}?fileId=${fileId}`;
+    
+    fetch(fetchUrl)
+        .then(res => res.json())
+        .then(data => {
+            if (data.status !== 'success') {
+                throw new Error(data.message);
+            }
+            // pdf.js can load a PDF from a Base64 string.
+            // atob() is a built-in function to decode Base64.
+            const pdfData = atob(data.fileContent);
+            
+            const loadingTask = pdfjsLib.getDocument({ data: pdfData });
+            loadingTask.promise.then(doc => {
+                pdfDoc = doc;
+                pdfTitle.textContent = fileName;
+                pageNum = 1;
+                renderPage(pageNum);
+                prevPageBtn.disabled = false;
+                nextPageBtn.disabled = false;
+            });
+        })
+        .catch(err => {
+            console.error('Error loading PDF:', err);
+            pdfTitle.textContent = 'Failed to load PDF.';
+        });
 };
 
 /**
