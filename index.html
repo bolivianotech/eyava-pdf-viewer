@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online PDF Viewer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Online PDF Viewer</h1>
+            <p>Upload and view PDF documents directly in your browser.</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <h2>Upload a New Document</h2>
+                <form id="upload-form">
+                    <label for="uploader-name">Your Name:</label>
+                    <input type="text" id="uploader-name" required>
+                    
+                    <label for="pdf-file">Select PDF File:</label>
+                    <input type="file" id="pdf-file" accept="application/pdf" required>
+                    
+                    <button type="submit" id="upload-button">Upload File</button>
+                    <div id="upload-status"></div>
+                </form>
+            </div>
+
+            <div class="viewer-section">
+                <div class="file-list-wrapper">
+                    <h2>Available Documents</h2>
+                    <div id="file-list-container">
+                        <p>Loading documents...</p>
+                    </div>
+                </div>
+                <div class="pdf-viewer-wrapper">
+                    <h2 id="pdf-title">Select a document to view</h2>
+                    <div id="pdf-viewer-controls">
+                        <button id="prev-page">Previous</button>
+                        <span id="page-num-display"></span>
+                        <button id="next-page">Next</button>
+                    </div>
+                    <div id="pdf-viewer">
+                        <canvas id="pdf-canvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
