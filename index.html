@@ -10,24 +10,20 @@
     <div class="container">
         <header>
             <h1>Eyava PDF Viewer</h1>
-            <p> Sube y mira tus documentos PDF directamente en tu navegador.</p>
+            <p>Sube y mira tus documentos PDF directamente en tu navegador.</p>
         </header>
-
         <main>
             <div class="upload-section">
                 <h2>Sube un nuevo documento</h2>
                 <form id="upload-form">
                     <label for="uploader-name">Ingresa tu nombre completo:</label>
                     <input type="text" id="uploader-name" required>
-                    
                     <label for="pdf-file">Selecciona el archivo PDF:</label>
                     <input type="file" id="pdf-file" accept="application/pdf" required>
-                    
                     <button type="submit" id="upload-button">Subir el PDF</button>
                     <div id="upload-status"></div>
                 </form>
             </div>
-
             <div class="viewer-section">
                 <div class="file-list-wrapper">
                     <h2>Documentos disponibles</h2>
@@ -49,8 +45,7 @@
             </div>
         </main>
     </div>
-     <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
-	
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
