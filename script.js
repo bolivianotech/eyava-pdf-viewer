@@ -1,6 +1,6 @@
 // --- CONFIGURATION ---
 // PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzGgb_7cSl5MVxrXWMaFoRpInCS5DnzbtVAi7tMLQ-svB4yni56QfQcZ-hGa7HGxsJI/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzUHvGy12Zkcth-iLjNhefE-y_jCx5nRZmTrYtHqBIxZ6yw7fcoorMY7rHJT0P62qI-/exec";
 //const SCRIPT_URL = "https://script.google.com/a/macros/bolivianotech.com/s/AKfycbzGgb_7cSl5MVxrXWMaFoRpInCS5DnzbtVAi7tMLQ-svB4yni56QfQcZ-hGa7HGxsJI/exec";
 //const SCRIPT_URL = "https://script.google.com/a/macros/bolivianotech.com/s/AKfycbzGgb_7cSl5MVxrXWMaFoRpInCS5DnzbtVAi7tMLQ-svB4yni56QfQcZ-hGa7HGxsJI/exec";
 // --- DOM ELEMENTS ---
